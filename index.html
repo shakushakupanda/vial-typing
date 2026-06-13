@@ -115,15 +115,18 @@
   }
 
   /* ---- mode tabs & stats ---- */
-  .toolbar { display: flex; align-items: flex-end; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
-  /* 「練習モード」「プレイ時間」「設定」のラベル付きグループ */
+  /* 「練習モード」「プレイ時間」「設定」を1行に収める（狭い画面では折り返す） */
+  .toolbar { display: flex; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
   .ctrl-group { display: flex; flex-direction: column; gap: 4px; }
-  .ctrl-label { font-size: 11px; font-weight: 700; letter-spacing: .5px; color: var(--dim); }
-  .ctrl-group.settings { margin-left: auto; }
-  .settings-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .modes { display: flex; gap: 5px; }
-  .times { display: flex; gap: 5px; }
-  .modes button, .times button { padding: 5px 11px; font-size: 11.5px; box-shadow: 0 2px 0 var(--border); }
+  .ctrl-label { font-size: 10px; font-weight: 700; letter-spacing: .5px; color: var(--dim); }
+  .ctrl-group.settings { margin-left: 0; }
+  .settings-row { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+  .modes { display: flex; gap: 4px; }
+  .times { display: flex; gap: 4px; }
+  .modes button, .times button { padding: 4px 8px; font-size: 10.5px; box-shadow: 0 2px 0 var(--border); }
+  .settings-row #btnSound { padding: 5px 9px; font-size: 10.5px; }
+  .settings-row .pref { font-size: 10px; gap: 3px; }
+  .settings-row .pref select { padding: 4px 7px; font-size: 10.5px; }
   .modes button.active {
     background: linear-gradient(90deg, var(--accent2), #9d8ffa);
     border-color: var(--accent2); color: #fff;
